@@ -1,0 +1,19 @@
+{% extends 'partials/cliente/body_cliente.html' %}
+{% load crispy_forms_tags %}
+{% block contenido %}
+  <div class="container">
+    
+    <div class="row">
+      <div class="rounded card p-3 col-md-8">
+        <form method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+          {{ form|crispy }}
+          <input class="btn btn-success" type="submit" value="Agregar" />
+
+        </form>
+      </div>      
+    </div>
+  </div>
+  <script>
+  </script>
+{% endblock %}
